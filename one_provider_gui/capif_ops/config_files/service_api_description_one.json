@@ -1,0 +1,83 @@
+
+{
+    "apiName": "one-api",
+    "aefProfiles": [
+      {
+        "aefId": "",
+        "versions": [
+          {
+            "apiVersion": "v1",
+            "expiry": "2021-11-30T10:32:02.004Z",
+            "resources": [
+              {
+                "resourceName": "create-vm-endpoint",
+                "commType": "REQUEST_RESPONSE",
+                "uri": "/createVM",
+                "custOpName": "string",
+                "operations": [
+                  "POST"
+                ],
+                "description": "Endpoint to create vm in ONE"
+              },
+              {
+                "resourceName": "check-vm-endpoint",
+                "commType": "REQUEST_RESPONSE",
+                "uri": "/checkVM",
+                "custOpName": "string",
+                "operations": [
+                  "POST"
+                ],
+                "description": "Endpoint to check VM in ONE"
+              },
+              {
+                "resourceName": "remove-vm-endpoint",
+                "commType": "REQUEST_RESPONSE",
+                "uri": "/removeVM",
+                "custOpName": "string",
+                "operations": [
+                  "POST"
+                ],
+                "description": "Endpoint to remove VM in ONE"
+              }
+            ],
+            "custOperations": [
+              {
+                "commType": "REQUEST_RESPONSE",
+                "custOpName": "string",
+                "operations": [
+                  "POST"
+                ],
+                "description": "string"
+              }
+            ]
+          }
+        ],
+        "protocol": "HTTP_1_1",
+        "dataFormat": "JSON",
+        "securityMethods": ["Oauth"],
+        "interfaceDescriptions": [
+          {
+            "ipv4Addr": "one_provider_gui",
+            "port": 8088,
+            "securityMethods": ["Oauth"]
+          }
+        ]
+      }
+    ],
+    "description": "ONE api services",
+    "supportedFeatures": "fffff",
+    "shareableInfo": {
+      "isShareable": true,
+      "capifProvDoms": [
+        "string"
+      ]
+    },
+    "serviceAPICategory": "string",
+    "apiSuppFeats": "fffff",
+    "pubApiPath": {
+      "ccfIds": [
+        "string"
+      ]
+    },
+    "ccfId": "string"
+  }

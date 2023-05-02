@@ -1,0 +1,15 @@
+.idea
+.git
+# Byte-compiled / optimized / DLL files
+__pycache__/
+./libraries/__pycache__/*.py[cod]
+*.py[cod]
+*$py.class
+*.DS_Store
+*.key
+*.csr
+*.crt
+*.pem
+*./valid_ca/*
+demo_values.json
+capif_provider_details.json

@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  one_provider_gui:
+    image: pytho
+    networks:
+      - demo-network
+    hostname: exposer
+    container_name: one_provider_gui
+    build:
+      context: ./one_provider_gui
+    volumes:
+      - ./one_provider_gui:/usr/src/app
+    environment:
+      - REDIS_HOST=redis_aef
+      - REDIS_PORT=6379
+      - REQUESTS_CA_BUNDLE=/usr/src/app/ca.crt
+      - SSL_CERT_FILE=/usr/src/app/ca.crt
+      - CAPIF_HOSTNAME=${CAPIF_HOSTNAME}
+      - CAPIF_PORT=8080
+      - EASY_RSA_PORT=8083
+    extra_hosts:
+      - host.docker.internal:host-gateway
+      # - invoker_gui:host-gateway
+      - capifcore:host-gateway
+      - register:host-gateway
+      - easy-rsa:host-gateway
+
+networks:
+  demo-network:
+    external: true
+# networks: 
+#   default: 
+#     external: 
+#       name: capif-network

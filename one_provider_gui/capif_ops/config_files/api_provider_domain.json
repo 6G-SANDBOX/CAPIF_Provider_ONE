@@ -1,0 +1,28 @@
+{
+    "apiProvFuncs": [
+      {
+        "regInfo": {
+          "apiProvPubKey": ""
+        },
+        "apiProvFuncRole": "AEF",
+        "apiProvFuncInfo": "dummy_aef"
+      },
+      {
+        "regInfo": {
+          "apiProvPubKey": ""
+        },
+        "apiProvFuncRole": "APF",
+        "apiProvFuncInfo": "dummy_apf"
+      },
+      {
+        "regInfo": {
+          "apiProvPubKey": ""
+        },
+        "apiProvFuncRole": "AMF",
+        "apiProvFuncInfo": "dummy_amf"
+      }
+    ],
+    "apiProvDomInfo": "This is provider",
+    "suppFeat": "fff",
+    "failReason": "string"
+}

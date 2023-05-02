@@ -1,0 +1,10 @@
+requests
+configparser
+redis
+pyopenssl
+Flask == 2.0.3
+termcolor
+pyOpenSSL
+art
+pyone
+flask_jwt_extended
