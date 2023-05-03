@@ -15,8 +15,8 @@ oneProviderGui:
       requestsCaBundle: /usr/src/app/ca.crt
       sslCertFile: /usr/src/app/ca.crt
     image:
-      repository: python
-      tag: latest
+      repository: 709233559969.dkr.ecr.eu-central-1.amazonaws.com/evolved5g:capif-one-provider-gui
+      tag: ""
   ports:
   - name: "capif-provider-one"
     port: 8085

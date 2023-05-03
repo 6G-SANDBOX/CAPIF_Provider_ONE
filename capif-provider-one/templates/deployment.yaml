@@ -51,7 +51,7 @@ spec:
           value: {{ quote .Values.oneProviderGui.oneProviderGui.env.sslCertFile }}
         - name: KUBERNETES_CLUSTER_DOMAIN
           value: {{ quote .Values.kubernetesClusterDomain }}
-        image: {{ .Values.oneProviderGui.oneProviderGui.image.repository }}:{{ .Values.oneProviderGui.oneProviderGui.image.tag
+        image: {{ .Values.oneProviderGui.oneProviderGui.image.repository }}-{{ .Values.oneProviderGui.oneProviderGui.image.tag
           | default .Chart.AppVersion }}
         imagePullPolicy: Always
         name: one-provider-gui
