@@ -2,7 +2,7 @@ version: '3'
 
 services:
   one_provider_gui:
-    image: pytho
+    image: one_provider_gui
     networks:
       - demo-network
     hostname: exposer
