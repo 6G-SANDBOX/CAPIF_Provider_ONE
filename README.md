@@ -5,6 +5,18 @@ This is the implementation of a Provider (AEF) for the Opennebula service
 ## Prerequisites
 Before executing the following code it is necessary to have raised an instance of [CAPIF](https://github.com/EVOLVED-5G/CAPIF_API_Services).
 
+
+## Important
+This code is intended for testing in a local docker environment. If it is going to be deployed in an environment such as kubernetes, it is necessary to make modifications to the following file:
+
+```
+./capif_ops/config_files/service_api_description_one.json
+
+```
+```
+"ipv4Addr": <url of the service>
+```
+
 ## Set Up
 This repo is designed to be executed from docker, to create the images and raise the instance it is only necessary to execute the following command:
 ```
@@ -82,6 +94,7 @@ This service has Apified some of the functions of ONE. To start the service run 
 python service/service_oauth.py
 
 ```
+- It is necessary to modify the URL and the ONE credentials to be used in the python service itself
 
 The endpoints that are implemented are the following
 
