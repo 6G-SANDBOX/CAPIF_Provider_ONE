@@ -5,7 +5,7 @@ import os
 class CaOps():
     def get_ca_root(self):
         easy_rsa_hostname = os.getenv('EASY_RSA_HOSTNAME')
-        url = f"http://{easy_rsa_hostname}:8083/ca-root"
+        url = f"https://{easy_rsa_hostname}:8083/ca-root"
 
         headers = {
 
