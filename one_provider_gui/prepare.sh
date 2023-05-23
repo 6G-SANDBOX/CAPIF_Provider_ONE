@@ -26,17 +26,17 @@ $CHALLENGE
 $COMPANY
 __EOF__
 
-# curl  -k --connect-timeout 5 \
-#     --max-time 10 \
-#     --retry-delay 0 \
-#     --retry-max-time 40 \
-#     --request GET "https://easy-rsa:$CAPIF_PORT/ca-root" 2>/dev/null | jq -r '.certificate' -j > ./capif_ops/certs/ca.crt
-
 curl  -k --connect-timeout 5 \
     --max-time 10 \
     --retry-delay 0 \
     --retry-max-time 40 \
-    --request GET "http://$CAPIF_HOSTNAME:$CAPIF_PORT/ca-root" 2>/dev/null | jq -r '.certificate' -j > ./capif_ops/certs/ca.crt
+    --request GET "https://$EASY_RSA_HOSTNAME-rsa:$EASY_RSA_PORT/ca-root" 2>/dev/null | jq -r '.certificate' -j > ./capif_ops/certs/ca.crt
+
+# curl  -k --connect-timeout 5 \
+#     --max-time 10 \
+#     --retry-delay 0 \
+#     --retry-max-time 40 \
+#     --request GET "http://$CAPIF_HOSTNAME:$CAPIF_PORT/ca-root" 2>/dev/null | jq -r '.certificate' -j > ./capif_ops/certs/ca.crt
 
 
 openssl s_client -connect $CAPIF_HOSTNAME:443  | openssl x509 -text > ./capif_ops/certs/cert_server.pem

@@ -4,8 +4,8 @@ import os
 
 class CaOps():
     def get_ca_root(self):
-        capif_ip = os.getenv('CAPIF_HOSTNAME')
-        url = f"http://{capif_ip}:8083/ca-root"
+        easy_rsa_hostname = os.getenv('EASY_RSA_HOSTNAME')
+        url = f"http://{easy_rsa_hostname}:8083/ca-root"
 
         headers = {
 
