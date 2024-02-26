@@ -23,7 +23,7 @@ pubKeyString = crypto.dump_publickey(crypto.FILETYPE_PEM,pubKeyObject)
 app.config['JWT_ALGORITHM'] = 'RS256'
 app.config['JWT_PUBLIC_KEY'] = pubKeyString
 
-one = pyone.OneServer("http://10.95.54.244:2633/RPC2", session="oneadmin:labpassword")
+one = pyone.OneServer("http://10.95.54.244:2633/RPC2", session="user:user_pass")
 
 @app.route("/createVM", methods=["POST"])
 @jwt_required()
